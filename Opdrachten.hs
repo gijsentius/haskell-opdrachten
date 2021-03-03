@@ -19,7 +19,7 @@ fac' x
   | otherwise = x * fac (x -1)
 
 -- opgave 1.4
--- een voorbeeld is logischerwijs de tweede afgeleide en .. 
+-- een voorbeeld is logischerwijs de tweede afgeleide en ..
 
 -- opgave 1.5
 lijst = 1 : [1] -- Voor het toevoegen van een element
@@ -44,7 +44,7 @@ eenVanDe xs
 
 -- opgave 1.7 b
 eenVanDe' [] = False
-eenVanDe' (x:xs) = x || eenVanDe' xs
+eenVanDe' (x : xs) = x || eenVanDe' xs
 
 -- opgave 1.7 c
 eenVanDe'' xs = foldr (||) False xs
@@ -77,6 +77,7 @@ som'' = foldr (+) 0
 -- opgave 1.11
 oneven :: Integral a => a -> Bool
 oneven = not . even
+
 -- om te testen of het inderdaad hetzelfde is
 oneven' :: Integral x => x -> Bool
 oneven' x = (not . even) x
@@ -85,5 +86,12 @@ oneven' x = (not . even) x
 -- map (^2) [1,2,3,..,10]
 
 -- opgave 1.13
--- f (x, y) betekent dat f een tupel verwacht. 
+-- f (x, y) betekent dat f een tupel verwacht.
 -- f is in haskell een functie die een parameter heeft namelijk de tupel.
+
+-- opgave 1.14
+-- a) (plus 3) (plus 4 5) == plus 3 (plus 4 5)
+-- b) sqrt (3) + (sqrt 4) == sqrt 3 + sqrt 4
+-- c) (a -> b) -> (c -> d) == (a -> b) -> c -> d
+
+-- opgave 1.15
